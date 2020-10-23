@@ -1,0 +1,55 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.tab{
+
+	border-collapse: collapse;
+	
+}
+/*
+.table td,.table th{
+  padding:12px 15px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:16px;
+}*/
+
+.tab th{
+	background-color: darkblue;
+	color:#ffffff;
+}
+/*
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+
+/*responsive*/
+
+@media(max-width: 700px){
+	.tab thead{
+		display: none;
+	}
+
+	.tab, .table tbody, .tab tr, .tab td{
+		display: block;
+
+	}
+	.tab td{
+
+		border: none;
+
+		position: relative;
+	}
+	/*.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}*/
+}

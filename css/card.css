@@ -1,0 +1,561 @@
+ 
+:root {
+    --clr-light: #e8e8e8;
+    --clr-dark: #2b322c;
+    --clr-primary: #dbffa2;
+    --clr-secondary: #c3fcf2;
+    --clr-accent: #ff7750;
+    --clr-dark-card: #f5f6fa;
+    --clr-dark-text: #2b322c;
+    --clr-dark-text-doc: #2b322c;
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+    --background-card: var(--clr-dark-card);
+    --text-card: var(--clr-dark-text);
+    --text-card-doc: var(--clr-dark-text-doc);
+    --ff-title: "Playfair Display", serif;
+    --ff-body: "Assistant", sans-serif;
+}
+.darkmode {
+    --clr-light: #fff;
+    --clr-dark: #525252;
+    --clr-primary: #202302;
+    --clr-secondary: #00100d;
+    --clr-accent: #ff7750;
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+    --clr-dark-card: #2b322c;
+    --clr-dark-text: #f5f6fa;
+    --clr-dark-text-doc: #f5f6fa;
+    --background-card: var(--clr-dark-card);
+    --text-card: var(--clr-dark-text);
+    --text-card-doc: var(--clr-dark-text-doc);
+}
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-size: 18px;
+    line-height: 1.6;
+}
+.darkmode {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-size: 18px;
+    line-height: 1.6;
+}
+.dark-mode-toggle {
+    z-index: 100;
+    /* color: var(--text-card); */
+    /* border: 2px solid currentColor; */
+    /* padding: 4px; */
+    background: transparent;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    /* width: 30px; */
+    border: none;
+    /* height: 30px; */
+}
+#darckBT{
+    fill:var(--text-card);
+}
+/***--розклад занять--***/
+/*карточка*/
+.cards {
+    padding: 5px 20px;
+    background: var(--background-card);
+    border-radius: 8px;
+    color: var(--text-card);
+    position: relative;
+    border: 0;
+    max-width: 420px;
+    margin-bottom: 10px;
+}
+/*Шрифти та розміри*/
+.textStyle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+}
+.textStyle26px {
+    font-size: 26px;
+    font-weight: bold;
+}
+.textStyle20px {
+    font-size: 20px;
+    font-weight: bold;
+}
+.textStyle18px {
+    font-size: 18px;
+    font-weight: bold;
+}
+.textStyle16px {
+    font-size: 16px;
+    font-weight: normal;
+}
+.textStyle14px {
+    font-size: 14px;
+    font-weight: normal;
+}
+.textStyle14pxB {
+    font-size: 14px;
+    font-weight: bolder;
+}
+/*********************/
+/*час. тип. аудиторія*/
+.dop {
+    color: var(--text-card-doc);
+    margin-bottom: 15px;
+}
+.doc {
+    width: 50%;
+    float: left;
+}
+.time {
+    text-align: left;
+}
+.aud, .pre, .type, .block_time {
+    text-align: right;
+}
+.dopLine, .grup {
+    float: left;
+}
+/*********************/
+/*Підпис групи*/
+.ait-schedl-header {
+    text-align: center;
+    margin: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    color: var(--foreground);
+}
+/*день пари*/
+.day {
+    margin: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: var(--foreground);
+}
+/*дата пари*/
+.day span {
+    float: right;
+    margin-right: 10px;
+}
+/********--***********/
+/**розклад дзвінків**/
+.parent {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*номер пар*/
+.marg {
+    margin-top: 15px;
+    margin-bottom: 13px;
+}
+/*статус пар*/
+.flex {
+    position: absolute;
+    z-index: 1;
+    color: var(--text-card);
+    display: none;
+    left: 28px;
+}
+.add-button {
+    display: flex;
+    z-index: 10;
+    position: fixed;
+    bottom: 58px;
+    border: none;
+    width: 100%;
+    height: 60px;
+    background: #C6B17C;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+/**/
+/***/
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.select-box .ait-schedlfind-fac {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.select-box .options-container, .select-box .options-container1, .select-box .options-container2, .select-box .options-container3, .select-box .options-container4, .select-box .options-container5, .select-box .options-container6 {
+    background: #2f3640;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1;
+}
+.selected, .selected1, .selected2, .selected3, .selected4, .selected5, .selected6 {
+    background: var(--background-card);
+    margin-bottom: 8px;
+    color: var(--text-card);
+    position: relative;
+    border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+}
+.ait-schedlfind-indent {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: var(--text-card-doc);
+}
+.selected::after, .selected1::after, .selected2::after, .selected3::after, .selected4::after, .selected5::after, .selected6::after {
+    content: "";
+   /*background: url("ico/Group19.svg");
+   */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+.select-box .options-container.active, .select-box .options-container1.active, .select-box .options-container2.active, .select-box .options-container3.active, .select-box .options-container4.active, .select-box .options-container5.active, .select-box .options-container6.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+.select-box .options-container.active + .selected::after, .select-box .options-container1.active + .selected1::after, .select-box .options-container2.active + .selected2::after, .select-box .options-container3.active + .selected3::after, .select-box .options-container4.active + .selected4::after, .select-box .options-container5.active + .selected5::after, .select-box .options-container6.active + .selected6::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+.select-box .options-container::-webkit-scrollbar, .select-box .options-container1::-webkit-scrollbar, .select-box .options-container2::-webkit-scrollbar, .select-box .options-container3::-webkit-scrollbar, .select-box .options-container4::-webkit-scrollbar, .select-box .options-container5::-webkit-scrollbar, .select-box .options-container6::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+.select-box .options-container::-webkit-scrollbar-thumb, .select-box .options-container1::-webkit-scrollbar-thumb, .select-box .options-container2::-webkit-scrollbar-thumb, .select-box .options-container3::-webkit-scrollbar-thumb, .select-box .options-container4::-webkit-scrollbar-thumb, .select-box .options-container5::-webkit-scrollbar-thumb, .select-box .options-container6::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+.select-box .option, .selected, .select-box .option1, .selected1, .select-box .option, .selected2, .select-box .option2, .selected2, .select-box .option, .selected3, .select-box .option3, .selected3, .select-box .option, .selected4, .select-box .option4, .selected4, .select-box .option, .selected5, .select-box .option5, .selected5, .select-box .option, .selected6, .select-box .option6, .selected6 {
+    padding: 12px 7px;
+    cursor: pointer;
+}
+.select-box label {
+    cursor: pointer;
+}
+.select-box .option .radio, .select-box .option1 .radio, .select-box .option2 .radio, .select-box .option3 .radio, .select-box .option4 .radio, .select-box .option5 .radio, .select-box .option6 .radio {
+    display: none;
+}
+ul li {
+    display: block;
+}
+ul li input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+ul li label {
+    display: block;
+    position: relative;
+    padding: 36px 0px 23px 50px;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #2b322c;
+}
+ul li .check {
+    display: block;
+    position: absolute;
+    border: 2px solid #33526b;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+}
+ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 13px;
+    width: 13px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+}
+input[type=radio]:checked ~ .check {
+    border: 3px solid #2b322c;
+}
+input[type=radio]:checked ~ .check::before {
+    background: #33526b;
+}
+input[type=radio]:checked ~ label {
+    color: #33526b;
+}
+#raz {
+   /* корпус */
+    top: 200;
+}
+#raz > div {
+   /* вкладка */
+    position: absolute;
+   /* z-index: 1;
+    */
+    height: 100%;
+    width: 100%;
+   /* visibility: collapse;
+    */
+   /* transition: 0s 9999999s;
+    */
+   /* box-sizing: border-box;
+    */
+   /* background: #fff;
+    */
+   /* padding: 5px;
+   */
+    top: 160px;
+}
+#raz > div:before {
+   /* рамка вкладки */
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: #808080 solid 1px;
+    border-top: none;
+}
+#raz > div > span {
+   /* кнопка */
+    position: absolute;
+    top: -50px;
+   /* line-height: 30px;
+    */
+    height: 60px;
+   /* width: 50%;
+    */
+   /* text-align: center;
+    */
+   /* box-sizing: border-box;
+    */
+   /* border: 1px solid rgb(128,128,128);
+    */
+   /* border-left-color: rgba(0,0,0,0);
+    */
+    visibility: visible;
+   /* transition: 0s 9999999s;
+    */
+   /* cursor: pointer;
+   */
+}
+#raz > div:nth-of-type(1) > span {
+    left: 10;
+}
+#raz > div:nth-of-type(2) > span {
+    left: 50%;
+}
+.full {
+    width: -webkit-fill-available;
+}
+.data_rozk, .inp_data {
+    padding: 6px 11px;
+    margin: 15px;
+    cursor: pointer;
+    background: var(--background-card);
+    border-radius: 8px;
+   /* margin-bottom: 8px;
+    */
+    color: var(--text-card);
+    position: relative;
+    border: 0;
+    width: -webkit-fill-available;
+}
+.data_rozk1 {
+    padding: 6px 11px;
+    margin: 15px;
+    width: 91vw;
+    height: 7vh;
+    cursor: pointer;
+    background: #c6b17c;
+    border-radius: 8px;
+   /* margin-bottom: 8px;
+    */
+    color: #f5f6fa;
+    position: relative;
+    border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+.data_rozk1:disabled {
+    padding: 6px 11px;
+    margin: 15px;
+    width: 91vw;
+    height: 7vh;
+    cursor: pointer;
+    background: #60563d;
+    border-radius: 8px;
+   /* margin-bottom: 8px;
+    */
+    position: relative;
+    border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #b7b7b7;
+}
+.data_rozk1:disabled::after {
+    content: '⛔';
+    padding-left: 10px;
+    opacity: 0.7;
+}
+.inp {
+    display: inline-block;
+}
+* {
+    outline: none;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+button:active, button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+#block1, #block2, #block3, #block4, #block5, #block6 {
+    display: none;
+}
+.dateW {
+    width: 48.5%;
+}
+.dateFL {
+    float: left;
+}
+.dateFR {
+    float: right;
+}
+.dateP {
+    padding: 0 !important;
+}
+.buttonAllW {
+    width: -webkit-fill-available;
+    padding: 15px !important;
+}
+button:disabled::after{
+    content: '⛔';
+    padding-left: 10px;
+    opacity: 0.7;
+  }
+
+/**/
+a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+/**/
+.margDM {
+    margin-top: 4px;
+}
+/**/
+rect, path{
+    fill:var(--text-card);
+}
+
+/**/
+.selectors button {
+    border: 0;
+    border-radius: 0;
+    background: var(--background);
+    width: 35%;
+    margin-left: 0;
+}
+.selectors, .block {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    background: var(--background);
+}
+#border circle, line{
+    stroke:var(--text-card);
+}
+#home{
+    border-top: 2px solid var(--text-card);    
+}
+.wait{
+    margin: 20%
+}
+.paddingSet{
+    padding: 20px;
+}
+
+.addImg{
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        display: inline-flex;
+}
+.addSvgM{
+    margin: 15px;
+}
+.marB{
+    margin-bottom: 80px;
+}
+
+
+/*погода*/
+
+.pZero{
+    padding: 0;
+}
+.pCard{
+    padding: 5px 20px;
+}
+.imgBRad{
+    border-radius: 7px 7px 0px 0px;
+}
+
