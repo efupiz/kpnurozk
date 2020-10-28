@@ -2,7 +2,6 @@ const fs = require('fs')
 const axios = require('axios')
 const cheerio = require('cheerio')
 
-
 var month = new Date().getMonth()+1;
 var year = new Date().getUTCFullYear();
 var day = new Date().getDate()+1;
@@ -46,7 +45,6 @@ const parskpnu = async () => {
                             month: $(element).find('p.month').text(),
                             min: $(element).find('div.min').text(),
                             max: $(element).find('div.max').text(),
-                            img: $(element).find('img.weatherImg').attr("src"),
                             class: $(element).find('div.weatherIco').attr("class"),
                             title: $(element).find('div.weatherIco').attr("title"),
                             text: $(element).find('div.wDescription.clearfix').text(),
@@ -63,7 +61,7 @@ const parskpnu = async () => {
 
 
             if(flag){
-                fs.writeFile('parseS.json', JSON.stringify(arr), function(err){
+                fs.writeFile('public/json/parseS.json', JSON.stringify(arr), function(err){
                    if(err) throw err
                     console.log('Saved json file');
                 })

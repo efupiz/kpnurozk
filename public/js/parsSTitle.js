@@ -54,7 +54,7 @@ const parskpnu = async () => {
 
 
             if(flag){
-                fs.writeFile('parseSTitle.json', JSON.stringify(arr), function(err){
+                fs.writeFile('public/json/parseSTitle.json', JSON.stringify(arr), function(err){
                    if(err) throw err
                     console.log('Saved json file');
                 })
