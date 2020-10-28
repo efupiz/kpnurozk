@@ -525,7 +525,8 @@ rect, path{
     border-top: 2px solid var(--text-card);    
 }
 .wait{
-    margin: 20%
+    margin: 35%;
+    width: 100px;
 }
 .paddingSet{
     padding: 20px;
