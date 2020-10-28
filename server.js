@@ -1,11 +1,11 @@
 const cron = require("node-cron");
 let shell = require("shelljs");
 
-cron.schedule("* 23 * * *", function(){
+cron.schedule("10 5 * * *", function(){
     if(shell.exec("node public/js/parsS.js").code !== 0){}
 });
 
-cron.schedule("* 23 * * *", function(){
+cron.schedule("10 5 * * *", function(){
     if(shell.exec("node public/js/parsN.js").code !== 0){}
 });
 

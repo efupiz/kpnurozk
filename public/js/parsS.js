@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 
 var month = new Date().getMonth()+1;
 var year = new Date().getUTCFullYear();
-var day = new Date().getDate()+1;
+var day = new Date().getDate();
 
 if (month < 10 && day < 10) {
  var all_time = year +"-"+"0"+ month +"-"+"0"+day;
