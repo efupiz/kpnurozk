@@ -1,1 +1,1 @@
-web: node ruJs.js
+web: node server.js
