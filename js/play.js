@@ -22,22 +22,22 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "Night Owl",
-    artist: "Broke For Free",
-    image: "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
+    name: "Виду не подам",
+    artist: "Idris, Leos",
+    image: "https://mp3uk.net/templates/mp3uk/dleimages/no_image.jpg",
+    path: "https://mp3uk.net/mp3/files/idris-leos-vidu-ne-podam-mp3.mp3"
   },
   {
-    name: "Enthusiast",
-    artist: "Tours",
-    image: "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
+    name: "Фенди",
+    artist: "Рахим",
+    image: "https://mp3uk.net/uploads/posts/2020-07/thumbs/1594934982_fendi.jpg",
+    path: "https://mp3uk.net/mp3/files/rahim-fendi-mp3.mp3"
   },
   {
-    name: "Shipping Lanes",
-    artist: "Chad Crouch",
+    name: "Корона её минус",
+    artist: "Gidayyat",
     image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
+    path: "https://mp3uk.net/mp3/files/gidayyat-korona-eyo-minus-mp3.mp3",
   },
 ];
 
