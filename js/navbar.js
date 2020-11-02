@@ -5,7 +5,7 @@ var currentSelectorId = "home";
 //Function for getting the button ids
 function getButtons() {
     //List of button ids
-    var list = ["home", "feed", "create", "news", "account"];
+    var list = ["home", "feed", "create", "news", "account", "player"];
     return list;
 }
 
@@ -129,7 +129,22 @@ function myFunction5() {
     block7.style.cssText = `display:none !important;`;
     block8.style.cssText = `display:none !important;`;
 }
+function myFunction6() {
+    feed.style.cssText = `border-top: none`;
+    home.style.cssText = `border-top: none`;
+    create.style.cssText = `border-top: none`;
+    news.style.cssText = `border-top: none`;
+    account.style.cssText = `border-top: 2px solid var(--text-card);`;
 
+    block1.style.cssText = `display:none !important;`;
+    block2.style.cssText = `display:none !important;`;
+    block3.style.cssText = `display:none !important;`;
+    block4.style.cssText = `display:none !important;`;
+    block5.style.cssText = `display:none !important;`;
+    block6.style.cssText = `display:none !important;`;
+    block7.style.cssText = `display:none !important;`;
+    block8.style.cssText = `display:none !important;`;
+}
 function block() {
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;

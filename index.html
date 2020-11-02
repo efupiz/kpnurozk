@@ -19,7 +19,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/card.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.18.custom.css" />
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="/css/play.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 </head>
 <body id="by">
@@ -120,6 +124,32 @@
             </div>
         </div>
     </div>
+    <div class="inactive" id="page-player">
+        <div class="player" id="pl">
+            <div class="details">
+              <div class="now-playing">PLAYING x OF y</div>
+              <div class="track-art"></div>
+              <div class="track-name">Track Name</div>
+              <div class="track-artist">Track Artist</div>
+            </div>
+            <div class="buttons">
+              <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+              <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+              <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+            </div>
+            <div class="slider_container">
+              <div class="current-time">00:00</div>
+              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+              <div class="total-duration">00:00</div>
+            </div>
+            <div class="slider_container">
+              <i class="fa fa-volume-down"></i>
+              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+              <i class="fa fa-volume-up"></i>
+            </div>
+        </div>
+        
+    </div>
     <h1 class="status"></h1>  
     <footer class="footer" id="color_doc">
 
@@ -136,7 +166,6 @@
             </div>
         </div>
     </div>
-       
     <div aria-label="Basic example" class="btn-group selectors" id="buttonGroup" role="group">
             <button class="btn button-active" id="home" onclick="myFunction1()" type="button">
                     <svg id="border" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,6 +208,13 @@
                     <rect x="6" y="6.70007" width="18" height="2.4" rx="1" fill="#2B322C"/>
                 </svg>
             </button>
+            <button class="btn button-inactive" id="player" onclick="myFunction6()" type="button">
+                <svg id="border" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="22.3" width="18" height="2.4" rx="1" fill="#2B322C"/>
+                    <rect x="6" y="14.5001" width="18" height="2.4" rx="1" fill="#2B322C"/>
+                    <rect x="6" y="6.70007" width="18" height="2.4" rx="1" fill="#2B322C"/>
+                </svg>
+            </button>
         </div>
     </footer>
 	<script src="./js/rozkdzv.js"></script>
@@ -190,5 +226,7 @@
     <script src="./js/darkmode.js"></script>
     <script src="./js/sw.js"></script> 
     <script src="./js/parsHtml.js"></script>
+    <!-- Load the main script for the player -->
+    <script src="/js/play.js"></script>
 </body>
 </html>
