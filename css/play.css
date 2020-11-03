@@ -1,6 +1,5 @@
 
   .player {
-    height: 95vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,11 +11,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 25px;
   }
   
   .track-art {
-    margin: 25px;
+    margin-bottom: 25px;
     height: 250px;
     width: 250px;
     background-image: url("https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
@@ -24,16 +22,12 @@
     border-radius: 15%;
   }
   
-  .now-playing {
+  .now-playing, .track-artist{
     font-size: 1rem;
   }
   
   .track-name {
-    font-size: 3rem;
-  }
-  
-  .track-artist {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .buttons {
@@ -55,7 +49,7 @@
   }
   
   .slider_container {
-    width: 75%;
+    width: -webkit-fill-available;
     max-width: 400px;
     display: flex;
     justify-content: center;
@@ -91,7 +85,7 @@
   }
   
   .seek_slider {
-    width: 60%;
+    width: -webkit-fill-available;
   }
   
   .volume_slider {

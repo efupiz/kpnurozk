@@ -5,7 +5,7 @@ var currentSelectorId = "home";
 //Function for getting the button ids
 function getButtons() {
     //List of button ids
-    var list = ["home", "feed", "create", "news", "account", "player"];
+    var list = ["home", "feed", "create", "news", "player", "account"];
     return list;
 }
 
@@ -53,7 +53,8 @@ function myFunction1() {
     create.style.cssText = `border-top: none`;
     news.style.cssText = `border-top: none`;
     account.style.cssText = `border-top: none`;
-
+    player.style.cssText = `border-top: none`;
+    
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;
     block3.style.cssText = `display:none !important;`;
@@ -70,6 +71,7 @@ function myFunction2() {
     create.style.cssText = `border-top: none`;
     news.style.cssText = `border-top: none`;
     account.style.cssText = `border-top: none`;
+    player.style.cssText = `border-top: none`;
 
     block1.style.cssText = `display:block !important;`;
     block2.style.cssText = `display:block !important;`;
@@ -87,6 +89,7 @@ function myFunction3() {
     create.style.cssText = `border-top: 2px solid var(--text-card);`;
     news.style.cssText = `border-top: none`;
     account.style.cssText = `border-top: none`;
+    player.style.cssText = `border-top: none`;
 
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;
@@ -103,6 +106,7 @@ function myFunction4() {
     create.style.cssText = `border-top: none`;
     news.style.cssText = `border-top: 2px solid var(--text-card);`;
     account.style.cssText = `border-top: none`;
+    player.style.cssText = `border-top: none`;
 
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;
@@ -119,6 +123,7 @@ function myFunction5() {
     create.style.cssText = `border-top: none`;
     news.style.cssText = `border-top: none`;
     account.style.cssText = `border-top: 2px solid var(--text-card);`;
+    player.style.cssText = `border-top: none`;
 
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;
@@ -134,7 +139,8 @@ function myFunction6() {
     home.style.cssText = `border-top: none`;
     create.style.cssText = `border-top: none`;
     news.style.cssText = `border-top: none`;
-    account.style.cssText = `border-top: 2px solid var(--text-card);`;
+    account.style.cssText = `border-top: none`;
+    player.style.cssText = `border-top: 2px solid var(--text-card);`;
 
     block1.style.cssText = `display:none !important;`;
     block2.style.cssText = `display:none !important;`;

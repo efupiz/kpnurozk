@@ -465,7 +465,7 @@ button:active, button:focus {
 button::-moz-focus-inner {
     border: 0;
 }
-#block1, #block2, #block3, #block4, #block5, #block6 {
+#block1, #block2, #block3, #block4, #block5, #block6, .addMode{
     display: none;
 }
 .dateW {

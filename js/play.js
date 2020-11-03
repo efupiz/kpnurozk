@@ -20,12 +20,13 @@ let updateTimer;
 let curr_track = document.createElement('audio');
 
 // Define the tracks that have to be played
-let track_list = [
+
+track_list = [
   {
     name: "Виду не подам",
     artist: "Idris, Leos",
     image: "https://mp3uk.net/templates/mp3uk/dleimages/no_image.jpg",
-    path: "https://mp3uk.net/mp3/files/idris-leos-vidu-ne-podam-mp3.mp3"
+    path: "https://streamvideo.luxnet.ua/lux/smil:lux.stream.smil/chunklist_b128000_slukr.m3u8"
   },
   {
     name: "Фенди",
@@ -40,7 +41,6 @@ let track_list = [
     path: "https://mp3uk.net/mp3/files/gidayyat-korona-eyo-minus-mp3.mp3",
   },
 ];
-
 function random_bg_color() {
 
   // Get a number between 64 to 256 (for getting lighter colors)
