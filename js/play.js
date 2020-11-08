@@ -23,22 +23,28 @@ let curr_track = document.createElement('audio');
 
 track_list = [
   {
-    name: "Виду не подам",
-    artist: "Idris, Leos",
-    image: "https://mp3uk.net/templates/mp3uk/dleimages/no_image.jpg",
+    name: "Люкс ФМ",
+    artist: "103.1 FM",
+    image: "https://radio.24tv.ua/uploads/370x370_DIR/station_image/2020/08/5f4cbadc60fc3220508088.png",
     path: "https://streamvideo.luxnet.ua/lux/smil:lux.stream.smil/chunklist_b128000_slukr.m3u8"
   },
   {
-    name: "Фенди",
-    artist: "Рахим",
-    image: "https://mp3uk.net/uploads/posts/2020-07/thumbs/1594934982_fendi.jpg",
-    path: "https://mp3uk.net/mp3/files/rahim-fendi-mp3.mp3"
+    name: "Radio ROKS",
+    artist: "103.6 FM",
+    image: "https://radio.24tv.ua/uploads/370x370_DIR/station_image/2020/08/5f4cbad35a844308943127.png",
+    path: "https://online.radioroks.ua/RadioROKS"
   },
   {
-    name: "Корона её минус",
-    artist: "Gidayyat",
-    image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-    path: "https://mp3uk.net/mp3/files/gidayyat-korona-eyo-minus-mp3.mp3",
+    name: "Хіт FM",
+    artist: "96.4 FM",
+    image: "https://radio.24tv.ua/uploads/370x370_DIR/station_image/2020/08/5f4cbaa989965964275127.png",
+    path: "https://online.hitfm.ua/HitFM",
+  },
+  {
+    name: "KissFM",
+    artist: "106.5 FM",
+    image: "https://radio.24tv.ua/uploads/270x270_DIR/station_image/2020/08/5f4cbac525433765367272.png",
+    path: "https://online.kissfm.ua/KissFM",
   },
 ];
 function random_bg_color() {
